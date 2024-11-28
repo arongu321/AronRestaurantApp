@@ -1,0 +1,88 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="index.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+
+       <!-- Get Smythe Font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- Header section of app-->
+        <header>
+            <div class="header-inner">
+                <div class="banner">
+                    <img src="images/burger-banner.png" class="burger-img">
+                </div>
+                <div class="header-text">
+                    <h1>Jimmy's Diner</h1>
+                    <p>The best burgers and pizzas in town</p>
+                </div>
+            </div>
+        </header>
+        <!-- Main section of app -->
+        <main>
+            <section class="food-menu" id="food-menu">
+            </section>
+            <section class="modal hidden" id="modal">
+                <div class="modal-inner">
+                    <h2 class="modal-header">Enter card details</h2>
+                    
+                    <!-- Form to enter name and credit card information -->
+                    <form class="modal-form" id="modal-form">
+                        <input  
+                            required
+                            class="modal-input"
+                            id="fullName"
+                            name="fullName"
+                            type="text" 
+                            placeholder="Enter your name"
+                            pattern="[A-Za-zÀ-ÿ\s]+"
+                        >
+                        <input
+                            required
+                            class="modal-input"
+                            id="card-number"
+                            name="card-number"
+                            type="text" 
+                            placeholder="Enter card number"
+                            pattern="[0-9]{16}"
+                        >
+                        <input 
+                            required 
+                            class="modal-input"
+                            id="cvv"
+                            name="cvv"
+                            type="text" 
+                            placeholder="Enter CVV"
+                            pattern="[0-9]{3}"
+                        >
+                        <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+                    </form>
+                </div>
+            </section>
+            <!-- Order cart section of app -->
+            <section class="order-list hidden" id="order-list">
+                <div class="order-header">
+                    <h2>Your order</h2>
+                </div>
+                <div class="order-contents" id="order-contents">
+                    <!-- Any items ordered are placed here -->
+                </div>
+                <div class="total-price" id="total-price">
+                    <!-- Total price of order is placed here -->
+                </div>
+                <button class="complete-order-btn hidden" id="complete-order-btn">Complete Order</button>
+            </section>
+            <!-- Order delivery notification -->
+            <section class="delivery-order hidden" id="delivery-order">
+                <!-- Message will display here -->
+            </section>
+        </main>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
+
